@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maaheen Yasin Personal Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
 <body>
+
   <header>
-    <div class="hero-bg"></div>
-    <div class="profile-img">
-      <img src="images/profile.HEIC" alt="Maaheen Yasin Portrait" />
-    </div>
-    <h1 class="glow">Maaheen Yasin</h1>
-    <p class="subtitle">Visual Computing Graduate Student @ SFU | Aspiring Data Scientist & Software Engineer</p>
+    <h1>Maaheen Yasin</h1>
+    <p>Visual Computing Graduate Student @ SFU | Aspiring Data Scientist & Software Engineer </p>
     <p>From Algorithms to Applications — Crafting Tomorrow's Technology Today</p>
+
     <nav>
       <ul>
         <li><a href="#about">About Me</a></li>
@@ -36,178 +33,167 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <div class="section-flex">
-        <div class="about-img">
-          <img src="images/about-visual.jpg" alt="About Visual" />
-        </div>
-        <div>
-          <p>Hi, I'm Maaheen Yasin, a passionate data scientist and software engineer with a drive to create real-world impact through technology. Currently pursuing my Master's in Professional Computer Science with a major in Visual Computing at Simon Fraser University, I specialize in machine learning, deep learning, and scalable cloud solutions. My journey has taken me from academic projects in computer vision and cloud native technologies to professional experience modernizing data infrastructure at a global fintech company.</p>
-          <p>I thrive on solving complex problems, whether it's building intelligent systems for disaster recovery, designing microservices for the cloud, or leading teams to deliver innovative solutions. My toolkit includes Python, PyTorch, SQL, Apache Kafka, Docker, and Google Cloud Platform, and I'm always eager to learn new technologies and collaborate with others who share my enthusiasm for making a difference.</p>
-          <p>I'm driven by a relentless curiosity and a passion for turning ideas into reality. Whether it's collaborating with diverse teams, exploring cutting-edge technologies, or tackling complex challenges, I thrive on pushing boundaries and creating solutions that inspire and empower!</p>
-        </div>
-      </div>
+      <p>Hi, I'm Maaheen Yasin, a passionate data scientist and software engineer with a drive to create real-world impact through technology. Currently pursuing my Master's in Professional Computer Science with a major in Visual Computing at Simon Fraser University, I specialize in machine learning, deep learning, and scalable cloud solutions. My journey has taken me from academic projects in computer vision and cloud native technologies to professional experience modernizing data infrastructure at a global fintech company.</p>
+      <p>I thrive on solving complex problems, whether it's building intelligent systems for disaster recovery, designing microservices for the cloud, or leading teams to deliver innovative solutions. My toolkit includes Python, PyTorch, SQL, Apache Kafka, Docker, and Google Cloud Platform, and I'm always eager to learn new technologies and collaborate with others who share my enthusiasm for making a difference.</p>
+      <p>I'm driven by a relentless curiosity and a passion for turning ideas into reality. Whether it's collaborating with diverse teams, exploring cutting-edge technologies, or tackling complex challenges, I thrive on pushing boundaries and creating solutions that inspire and empower!</p>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-flex">
-        <div>
-          <h3>Technical</h3>
-          <ul>
-            <li>Python, C++</li>
-            <li>PyTorch, Pandas, NumPy, Matplotlib, Scikit-learn</li>
-            <li>Apache Kafka, ETL Pipelines, SQL, PostgreSQL, Informix, Greenplum</li>
-            <li>Microservices, Docker, GCP (Cloud Run, Kubernetes Engine, Compute Engine)</li>
-            <li>Visual Studio, VS Code, Colab, Jupyter, Jira, Bitbucket, Git</li>
-            <li>Agile, Scrum, SDLC</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Strategic problem-solving</li>
-            <li>Cross-functional collaboration</li>
-            <li>Persuasive communication</li>
-            <li>Technical mentorship</li>
-            <li>Adaptability & innovation</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>Programming Languages:</strong> Python, C++</li>
+    <li><strong>Machine Learning & Deep Learning:</strong> PyTorch, Pandas, NumPy, Matplotlib, Scikit-learn, Supervised/Unsupervised Learning (Classification, Clustering), Model Optimization (Linear & Non-Linear) </li>
+    <li><strong>Data Engineering:</strong> Apache Kafka, ETL Pipelines, SQL, PostgreSQL, RDBMS (Informix, Greenplum), Data Quality </li>
+    <li><strong>Cloud & DevOps:</strong> Microservices, Docker, Google Cloud Platform (Cloud Run, Kubernetes Engine, Compute Engine) </li>
+    <li><strong>Development Tools:</strong> Visual Studio, Visual Studio Code, Google Colab, Jupyter Notebook, Jira, Bitbucket (CI/CD), Git </li>
+    <li><strong>Software Development Methodologies:</strong> Agile, Scrum, Software Development Life Cycle (SDLC) </li>
+    <li><strong>Soft Skills:</strong> Strategic problem-solving, Effective cross-functional collaboration, Clear and persuasive communication, technical mentorship, Adaptability in fast-paced environments, and a genuine passion for driving innovation and continuous learning.</li>
+  </ul>
+</section>
+
 
     <section id="projects">
       <h2>Project Portfolio</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/project1.jpg" alt="Building Damage Assessment" />
-          <div>
-            <h3>Building Damage Assessment Using Satellite Imagery</h3>
-            <p>Advanced post-disaster analysis with AI, achieving high segmentation accuracy and real-world impact for emergency response.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="images/project2.jpg" alt="Weather Notification System" />
-          <div>
+            <h3>Building Damage Assessment Using Satellite Imagery for Large Natural Disasters</h3>
+            <p><strong>Role:</strong> Team Member</p>
+            <p><strong>Tech Stack:</strong> Python, PyTorch, NumPy, Matplotlib, Computer Vision, Segment Anything Model v2 (SAM2), Edge Aware Loss</p>
+            <p>Trained and optimized the DAHiTrA model for post-disaster building damage assessment using satellite imagery, effectively addressing existing challenges such as domain generalization, merging densely packed buildings in urban regions, and underrepresenting smaller structures in damage assessments. Improved segmentation accuracy by integrating Edge Aware Loss (F1-score: 0.903, IoU: 0.834) and implemented a SAM2-based boundary refinement pipeline to enhance building separation in dense urban areas, enabling more precise damage mapping for disaster response. This project demonstrated the real-world impact of AI in disaster response and recovery.</p>
+
             <h3>Scalable Microservices-Based Weather Notification System</h3>
-            <p>Designed a scalable, cloud-native system using Docker and GCP, with real-time performance benchmarking and analytics.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="images/project3.jpg" alt="COVID-19 SOPs System" />
-          <div>
-            <h3>COVID-19 SOPs Compliance System</h3>
-            <p>Automated compliance monitoring with computer vision and IoT, recognized among top capstone projects at SOFTEC.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <p><strong>Role:</strong> Team Member</p>
+            <p><strong>Tech Stack:</strong> Python (Flask), Docker, Google Cloud Platform, Cloud Run, Google Kubernetes Engine (GKE), Compute Engine, RESTful APIs, BigQuery, Google Cloud Monitoring</p>
+            <p>Designed and implemented a scalable weather notification system using microservices architecture, with each service containerized in Docker and deployed across Cloud Run, Google Kubernetes Engine, and Compute Engine. Leveraged Google Cloud Monitoring to benchmark performance, analyze resource utilization, and explored trade-offs across serverless, containerized, and VM-based environments.</p>
+    
+            <h3>Image Generation With Denoising Diffusion Probabilistic Model (DDPM)</h3>
+            <p><strong>Graduate Coursework</strong></p>
+            <p><strong>Tech Stack:</strong> Python, PyTorch, NumPy, Matplotlib, Diffusion Models, U-Net, Deep Learning</p>
+            <p>Implemented a DDPM using PyTorch  based on the original paper Denoising Diffusion Probabilistic Models by Ho et al, designing both forward and reverse diffusion processes and a custom time-conditioned U-Net. Successfully trained on the AFHQ dataset, achieving an FID of 24.43 and demonstrating stable convergence with limited computing resources.</p>
+
+            <h3>An-Automated COVID-19 SOPs Monitoring and Management System</h3>
+            <p><strong>Role:</strong> Team Lead</p>
+            <p><strong>Tech Stack:</strong> Python, CNN, MobileNetv2, YOLO, MediaPipe Library, Embedded Systems, Computer Vision, Deep Learning, NVIDIA Jetson Nano microprocessor, Arduino Uno, IoT Sensors (InfraRed Thermal Sensor, SpO2 sensor, Sonar sensor)</p>
+            <p>Spearheaded the development of a fully automated COVID-19 SOPs compliance system, integrating computer vision and IoT sensors to automate mask detection, social distancing, and vital sign monitoring. Deployed CNN for face mask detection and MobileNetV2 for social distancing monitoring on NVIDIA Jetson Nano and achieved 90.1% accuracy for real-time compliance monitoring. The project was recognized among the top 4 of 28 capstone submissions and showcased at SOFTEC 2022, NUCES' premier tech competition.</p>
+    
+        </section>
 
     <section id="experience">
       <h2>Professional Experience</h2>
-      <div class="exp-block">
-        <img src="images/i2c-logo.png" alt="i2c Inc. Logo" class="company-logo" />
-        <div>
-          <h3>i2c Inc.</h3>
-          <p class="company-desc">Global fintech provider of B2B payment solutions for clients like CIBC, Mastercard, and Visa.</p>
-          <h4>Software Engineer, Data Engineering Team</h4>
-          <ul>
-            <li>Led the development of a proof-of-concept to modernize batch data pipelines using Apache Kafka, significantly improving data processing speed and efficiency for financial reporting.</li>
-            <li>Collaborated with 4 cross-functional teams to design, implement, and test scalable data workflows for high-volume financial streams, enabling real-time analytics and data-driven decisions.</li>
-            <li>Authored 8+ technical documentation and operational protocols to support onboarding and cross-team collaboration within an Agile/Scrum environment.</li>
-            <li>Resolved a production data quality issue by tracing it to misconfigured ETL settings; led automation of configuration scripts with a junior engineer, reducing onboarding effort by 48% and ensuring accurate data synchronization.</li>
-          </ul>
-          <h4>Associate Engineer, Business Intelligence Team</h4>
-          <ul>
-            <li>Developed and optimized 13+ SQL views and tables to extract and transform financial data into actionable insights to deliver actionable business intelligence for enterprise clients.</li>
-            <li>Ensured data quality in the data warehouse by troubleshooting and resolving issues such as data duplication and gaps using PostgreSQL scripts and ETL workflows to maintain accurate CFO and Billing reports.</li>
-            <li>Collaborated on test-driven development of ETL workflows and financial reporting by designing and executing 12+ unit, system, and regression tests, ensuring consistent high-quality deliverables.</li>
-          </ul>
-        </div>
-      </div>
+        <h3>i2c Inc.</h3>
+        <p><em>Global fintech provider of B2B payment solutions for big clients like CIBC, Mastercard, and Visa.</em></p>
+
+    <h4>Software Engineer, Data Engineering Team</h4>
+    <p><em>Jan 2023 - Jul 2024</em></p>
+    <ul>
+      <li>Led the development of a proof-of-concept to modernize batch data pipelines using Apache Kafka, significantly improving data processing speed and efficiency for financial reporting.</li>
+      <li>Collaborated with 4 cross-functional teams to design, implement, and test scalable data workflows for high-volume financial streams, enabling real-time analytics and data-driven decisions.</li>
+      <li>Authored 8+ technical documentation and operational protocols to support onboarding and cross-team collaboration within an Agile/Scrum environment.</li>
+      <li>Resolved a production data quality issue by tracing it to misconfigured ETL settings; led automation of configuration scripts with a junior engineer, reducing onboarding effort by 48% and ensuring accurate data synchronization.</li>
+    </ul>
+
+    <h4>Associate Engineer, Business Intelligence Team</h4>
+    <p><em>Jul 2022 - Dec 2022</em></p>
+    <ul>
+      <li>Developed and optimized 13+ SQL views and tables to extract and transform financial data into actionable insights to deliver actionable business intelligence for enterprise clients.</li>
+      <li>Ensured data quality in the data warehouse by troubleshooting and resolving issues such as data duplication and gaps using PostgreSQL scripts and ETL workflows to maintain accurate CFO and Billing reports.</li>
+      <li>Collaborated on test-driven development of ETL workflows and financial reporting by designing and executing 12+ unit, system, and regression tests, ensuring consistent high-quality deliverables.</li>
+    </ul>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <div class="edu-block">
-        <img src="images/sfu-logo.png" alt="SFU Logo" class="school-logo" />
-        <div>
-          <h3>Simon Fraser University, Burnaby, Canada</h3>
-          <p><em>Master's in Professional Computer Science - Visual Computing</em> | Expected Graduation: Dec 2026</p>
-          <p>Concentrations: Computer Vision, Deep Learning</p>
-          <p>Relevant Coursework: Machine Learning, Visual Computing, Distributed & Cloud Systems</p>
-        </div>
-      </div>
-      <div class="edu-block">
-        <img src="images/nuces-logo.png" alt="NUCES Logo" class="school-logo" />
-        <div>
-          <h3>National University of Computer & Emerging Sciences (FAST-NUCES)</h3>
-          <p><em>Bachelor of Science in Electrical Engineering</em> | Sep 2018 - Jul 2022</p>
-          <p>Concentration: Computer Engineering</p>
-          <p>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Fundamentals, Data Communication & Networks</p>
-        </div>
-      </div>
+        <h3>Simon Fraser University, Burnaby, Canada</h3>
+        <p><em>Master's in Professional Computer Science - Visual Computing</em> | Expected Graduation: Dec 2026</p>
+        <p>Concentrations: Computer Vision, Deep Learning</p>
+        <p>Relevant Coursework: Machine Learning, Visual Computing, Distributed & Cloud Systems</p>
+
+
+        <h3>National University of Computer & Emerging Sciences (FAST-NUCES)</h3>
+        <p><em>Bachelor of Science in Electrical Engineering</em> | Sep 2018 - Jul 2022</p>
+        <p>Concentration: Computer Engineering</p>
+        <p>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Fundamentals, Data Communication & Networks</p>
     </section>
 
     <section id="awards">
       <h2>Awards</h2>
-      <ul class="awards-list">
-        <li><strong>Silver Medalist for Academic Excellence</strong> – NUCES (Oct 2022)</li>
-        <li><strong>Dean's List</strong> – NUCES (Spring 2022)</li>
-        <li><strong>Intra-FAST Programming Competition - 1st Place</strong> (2018)</li>
-        <li><strong>Elementary Robotics Workshop - 1st Place</strong> (2018)</li>
-      </ul>
+        <ul>
+
+    <li>
+      <strong>Silver Medalist for Academic Excellence</strong><br>
+      <em>National University of Computer & Emerging Sciences | Oct 2022</em><br>
+      Awarded for securing the first runner-up position in academic performance (Spring 2022), along with a cash prize.
+    </li>
+
+    <li>
+      <strong>Dean's List</strong><br>
+      <em>National University of Computer & Emerging Sciences | Spring 2022</em><br>
+      Recognized for achieving an SGPA above 3.5. Name published on the official NUCES website under Dean's List Spring 2022.
+    </li>
+
+    <li>
+      <strong>Intra-FAST Programming Competition - 1st Place</strong><br>
+      <em>NUCES ACM Society | Nov 2018</em><br>
+      Secured first place in a rapid programming challenge with a team of 3, earning the “Maestro Coder” title and a cash prize.
+    </li>
+
+    <li>
+      <strong>Elementary Robotics Workshop - 1st Place</strong><br>
+      <em>NUCES IEEE Society | Oct 2018</em><br>
+      Secured first place with a line-following robot that won the race for accuracy and speed.
+    </li>
+  </ul>
     </section>
 
     <section id="activities">
       <h2>Extra-Curricular Activities & Competitions</h2>
+       <ul>
+    <li>
+      <strong>University-Level Competitions</strong>
       <ul>
-        <li>
-          <strong>University-Level Competitions</strong>
-          <ul>
-            <li>Software Project Competition, SOFTEC (FAST-NUCES)</li>
-            <li>Programming Competition, SOFTEC (FAST-NUCES)</li>
-            <li>Programming Competition, UET Technical Symposium (UET)</li>
-            <li>Tech Wars & Math Geeks, PSIFI X (LUMS)</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Educational Workshops</strong>
-          <ul>
-            <li>Internet of Things Bootcamp</li>
-            <li>Learning Python Workshop</li>
-            <li>Machine Learning with Python Workshop</li>
-            <li>Graphic Designing Workshop</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Mathematics & Linguistics Contests</strong>
-          <ul>
-            <li>International Kangaroo Mathematics Contest (IKMC) - Multiple levels</li>
-            <li>International Kangaroo Linguistic Contest (IKLC)</li>
-          </ul>
-        </li>
+        <li>Software Project Competition, SOFTEC (FAST-NUCES)</li>
+        <li>Programming Competition, SOFTEC (FAST-NUCES)</li>
+        <li>Programming Competition, UET Technical Symposium (University of Engineering & Technology)</li>
+        <li>Tech Wars & Math Geeks, PSIFI X (LUMS)</li>
       </ul>
+    </li>
+    <li>
+      <strong>Educational Workshops</strong>
+      <ul>
+        <li>Internet of Things Bootcamp</li>
+        <li>Learning Python Workshop</li>
+        <li>Machine Learning with Python Workshop</li>
+        <li>Graphic Designing Workshop</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Mathematics & Linguistics Contests</strong>
+      <ul>
+        <li>International Kangaroo Mathematics Contest (IKMC) - Multiple levels</li>
+        <li>International Kangaroo Linguistic Contest (IKLC)</li>
+      </ul>
+    </li>
+  </ul>
     </section>
 
     <section id="community">
       <h2>Community Service</h2>
       <ul>
-        <li>
-          <strong>Volunteer Researcher, Anti-Plastic Ambassador Program</strong><br>
-          <em>Environment Society | Jan 2017 - Feb 2017</em><br>
-          Collaborated with a team of 8 to research plastic consumption and its environmental impact. Co-authored a comprehensive thesis, conducted public surveys, and presented actionable solutions to reduce plastic use, advocating for sustainable policies.
-        </li>
-        <li>
-          <strong>Community Volunteer, SOS Saturday's Initiative</strong><br>
-          <em>Parbat Foundation | Apr 2017</em><br>
-          Led creative arts and crafts sessions at SOS Children's Villages, inspiring children through hands-on activities and transforming spaces with collaborative art projects, fostering a joyful and inclusive environment.
-        </li>
-        <li>
-          <strong>Charity Fundraising Volunteer, Community Club</strong><br>
-          Organized bake sales and fundraising events, engaging the public to raise funds for various charitable causes and support local community initiatives.
-        </li>
-      </ul>
+    <li>
+      <strong>Volunteer Researcher, Anti-Plastic Ambassador Program</strong><br>
+      <em>Environment Society | Jan 2017 - Feb 2017</em><br>
+      Collaborated with a team of 8 to research plastic consumption and its environmental impact. Co-authored a comprehensive thesis, conducted public surveys, and presented actionable solutions to reduce plastic use, advocating for sustainable policies.
+    </li>
+    <li>
+      <strong>Community Volunteer, SOS Saturday's Initiative</strong><br>
+      <em>Parbat Foundation | Apr 2017</em><br>
+      Led creative arts and crafts sessions at SOS Children's Villages, inspiring children through hands-on activities and transforming spaces with collaborative art projects, fostering a joyful and inclusive environment.
+    </li>
+    <li>
+      <strong>Charity Fundraising Volunteer, Community Club</strong><br>
+      Organized bake sales and fundraising events, engaging the public to raise funds for various charitable causes and support local community initiatives.
+    </li>
+  </ul>
     </section>
+
 
     <section id="contact">
       <h2>Contact Me</h2>
@@ -220,6 +206,6 @@
     </section>
   </main>
 
-  <button id="backToTop">↑</button>
+  <button id="backToTop">↑ Top</button>
 </body>
 </html>
