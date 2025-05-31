@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maaheen Yasin | Portfolio</title>
+  <title>Maaheen Yasin Personal Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
 <body>
-
   <header>
-    <h1>Maaheen Yasin</h1>
-    <p>Data Engineer & Software Developer</p>
+    <div class="hero-bg"></div>
+    <div class="profile-img">
+      <img src="images/profile.HEIC" alt="Maaheen Yasin Portrait" />
+    </div>
+    <h1 class="glow">Maaheen Yasin</h1>
+    <p class="subtitle">Visual Computing Graduate Student @ SFU | Aspiring Data Scientist & Software Engineer</p>
+    <p>From Algorithms to Applications — Crafting Tomorrow's Technology Today</p>
     <nav>
       <ul>
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#awards">Awards</a></li>
-        <li><a href="#activities">Activities</a></li>
-        <li><a href="#community">Community</a></li>
+        <li><a href="#activities">Extra-Curricular Activities</a></li>
+        <li><a href="#community">Community Service</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -31,54 +36,183 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>[Bio, background, education, interests]</p>
-      <p>[Technical skill set and tools]</p>
+      <div class="section-flex">
+        <div class="about-img">
+          <img src="images/about-visual.jpg" alt="About Visual" />
+        </div>
+        <div>
+          <p>Hi, I'm Maaheen Yasin, a passionate data scientist and software engineer with a drive to create real-world impact through technology. Currently pursuing my Master's in Professional Computer Science with a major in Visual Computing at Simon Fraser University, I specialize in machine learning, deep learning, and scalable cloud solutions. My journey has taken me from academic projects in computer vision and cloud native technologies to professional experience modernizing data infrastructure at a global fintech company.</p>
+          <p>I thrive on solving complex problems, whether it's building intelligent systems for disaster recovery, designing microservices for the cloud, or leading teams to deliver innovative solutions. My toolkit includes Python, PyTorch, SQL, Apache Kafka, Docker, and Google Cloud Platform, and I'm always eager to learn new technologies and collaborate with others who share my enthusiasm for making a difference.</p>
+          <p>I'm driven by a relentless curiosity and a passion for turning ideas into reality. Whether it's collaborating with diverse teams, exploring cutting-edge technologies, or tackling complex challenges, I thrive on pushing boundaries and creating solutions that inspire and empower!</p>
+        </div>
+      </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <p>[Technical and soft skills]</p>
+      <div class="skills-flex">
+        <div>
+          <h3>Technical</h3>
+          <ul>
+            <li>Python, C++</li>
+            <li>PyTorch, Pandas, NumPy, Matplotlib, Scikit-learn</li>
+            <li>Apache Kafka, ETL Pipelines, SQL, PostgreSQL, Informix, Greenplum</li>
+            <li>Microservices, Docker, GCP (Cloud Run, Kubernetes Engine, Compute Engine)</li>
+            <li>Visual Studio, VS Code, Colab, Jupyter, Jira, Bitbucket, Git</li>
+            <li>Agile, Scrum, SDLC</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Strategic problem-solving</li>
+            <li>Cross-functional collaboration</li>
+            <li>Persuasive communication</li>
+            <li>Technical mentorship</li>
+            <li>Adaptability & innovation</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
       <h2>Project Portfolio</h2>
-      <p>[Project details with title, role, tech stack, impact, visuals]</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/project1.jpg" alt="Building Damage Assessment" />
+          <div>
+            <h3>Building Damage Assessment Using Satellite Imagery</h3>
+            <p>Advanced post-disaster analysis with AI, achieving high segmentation accuracy and real-world impact for emergency response.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Weather Notification System" />
+          <div>
+            <h3>Scalable Microservices-Based Weather Notification System</h3>
+            <p>Designed a scalable, cloud-native system using Docker and GCP, with real-time performance benchmarking and analytics.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project3.jpg" alt="COVID-19 SOPs System" />
+          <div>
+            <h3>COVID-19 SOPs Compliance System</h3>
+            <p>Automated compliance monitoring with computer vision and IoT, recognized among top capstone projects at SOFTEC.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="experience">
-      <h2>Work Experience</h2>
-      <p>[Relevant experience and responsibilities]</p>
+      <h2>Professional Experience</h2>
+      <div class="exp-block">
+        <img src="images/i2c-logo.png" alt="i2c Inc. Logo" class="company-logo" />
+        <div>
+          <h3>i2c Inc.</h3>
+          <p class="company-desc">Global fintech provider of B2B payment solutions for clients like CIBC, Mastercard, and Visa.</p>
+          <h4>Software Engineer, Data Engineering Team</h4>
+          <ul>
+            <li>Led the development of a proof-of-concept to modernize batch data pipelines using Apache Kafka, significantly improving data processing speed and efficiency for financial reporting.</li>
+            <li>Collaborated with 4 cross-functional teams to design, implement, and test scalable data workflows for high-volume financial streams, enabling real-time analytics and data-driven decisions.</li>
+            <li>Authored 8+ technical documentation and operational protocols to support onboarding and cross-team collaboration within an Agile/Scrum environment.</li>
+            <li>Resolved a production data quality issue by tracing it to misconfigured ETL settings; led automation of configuration scripts with a junior engineer, reducing onboarding effort by 48% and ensuring accurate data synchronization.</li>
+          </ul>
+          <h4>Associate Engineer, Business Intelligence Team</h4>
+          <ul>
+            <li>Developed and optimized 13+ SQL views and tables to extract and transform financial data into actionable insights to deliver actionable business intelligence for enterprise clients.</li>
+            <li>Ensured data quality in the data warehouse by troubleshooting and resolving issues such as data duplication and gaps using PostgreSQL scripts and ETL workflows to maintain accurate CFO and Billing reports.</li>
+            <li>Collaborated on test-driven development of ETL workflows and financial reporting by designing and executing 12+ unit, system, and regression tests, ensuring consistent high-quality deliverables.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <p>[Graduate and undergraduate degrees, coursework]</p>
+      <div class="edu-block">
+        <img src="images/sfu-logo.png" alt="SFU Logo" class="school-logo" />
+        <div>
+          <h3>Simon Fraser University, Burnaby, Canada</h3>
+          <p><em>Master's in Professional Computer Science - Visual Computing</em> | Expected Graduation: Dec 2026</p>
+          <p>Concentrations: Computer Vision, Deep Learning</p>
+          <p>Relevant Coursework: Machine Learning, Visual Computing, Distributed & Cloud Systems</p>
+        </div>
+      </div>
+      <div class="edu-block">
+        <img src="images/nuces-logo.png" alt="NUCES Logo" class="school-logo" />
+        <div>
+          <h3>National University of Computer & Emerging Sciences (FAST-NUCES)</h3>
+          <p><em>Bachelor of Science in Electrical Engineering</em> | Sep 2018 - Jul 2022</p>
+          <p>Concentration: Computer Engineering</p>
+          <p>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Fundamentals, Data Communication & Networks</p>
+        </div>
+      </div>
     </section>
 
     <section id="awards">
       <h2>Awards</h2>
-      <p>[Dean’s List, competitions]</p>
+      <ul class="awards-list">
+        <li><strong>Silver Medalist for Academic Excellence</strong> – NUCES (Oct 2022)</li>
+        <li><strong>Dean's List</strong> – NUCES (Spring 2022)</li>
+        <li><strong>Intra-FAST Programming Competition - 1st Place</strong> (2018)</li>
+        <li><strong>Elementary Robotics Workshop - 1st Place</strong> (2018)</li>
+      </ul>
     </section>
 
     <section id="activities">
       <h2>Extra-Curricular Activities & Competitions</h2>
-      <p>[Workshops and competitions]</p>
+      <ul>
+        <li>
+          <strong>University-Level Competitions</strong>
+          <ul>
+            <li>Software Project Competition, SOFTEC (FAST-NUCES)</li>
+            <li>Programming Competition, SOFTEC (FAST-NUCES)</li>
+            <li>Programming Competition, UET Technical Symposium (UET)</li>
+            <li>Tech Wars & Math Geeks, PSIFI X (LUMS)</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Educational Workshops</strong>
+          <ul>
+            <li>Internet of Things Bootcamp</li>
+            <li>Learning Python Workshop</li>
+            <li>Machine Learning with Python Workshop</li>
+            <li>Graphic Designing Workshop</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Mathematics & Linguistics Contests</strong>
+          <ul>
+            <li>International Kangaroo Mathematics Contest (IKMC) - Multiple levels</li>
+            <li>International Kangaroo Linguistic Contest (IKLC)</li>
+          </ul>
+        </li>
+      </ul>
     </section>
 
     <section id="community">
       <h2>Community Service</h2>
-      <p>[Initiatives like SOS Saturday and Anti-Plastic Ambassador]</p>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>[Links to your data science and software engineer resume]</p>
+      <ul>
+        <li>
+          <strong>Volunteer Researcher, Anti-Plastic Ambassador Program</strong><br>
+          <em>Environment Society | Jan 2017 - Feb 2017</em><br>
+          Collaborated with a team of 8 to research plastic consumption and its environmental impact. Co-authored a comprehensive thesis, conducted public surveys, and presented actionable solutions to reduce plastic use, advocating for sustainable policies.
+        </li>
+        <li>
+          <strong>Community Volunteer, SOS Saturday's Initiative</strong><br>
+          <em>Parbat Foundation | Apr 2017</em><br>
+          Led creative arts and crafts sessions at SOS Children's Villages, inspiring children through hands-on activities and transforming spaces with collaborative art projects, fostering a joyful and inclusive environment.
+        </li>
+        <li>
+          <strong>Charity Fundraising Volunteer, Community Club</strong><br>
+          Organized bake sales and fundraising events, engaging the public to raise funds for various charitable causes and support local community initiatives.
+        </li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact Me</h2>
       <p>Email: mya144@sfu.ca</p>
-      <p>Phone: (647)-918-5674</p>
+      <p>Phone: +1 (647)-918-5674</p>
       <p>
         <a href="https://github.com/Maaheen11">GitHub</a> |
         <a href="https://www.linkedin.com/in/maaheen-yasin">LinkedIn</a>
@@ -86,6 +220,6 @@
     </section>
   </main>
 
-  <button id="backToTop">↑ Top</button>
+  <button id="backToTop">↑</button>
 </body>
 </html>
