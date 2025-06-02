@@ -3,209 +3,609 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maaheen Yasin Personal Portfolio</title>
+  <title>Maaheen Yasin - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
+<div id="particles-bg"></div>
 
-  <header>
-    <h1>Maaheen Yasin</h1>
-    <p>Visual Computing Graduate Student @ SFU | Aspiring Data Scientist & Software Engineer </p>
-    <p>From Algorithms to Applications — Crafting Tomorrow's Technology Today</p>
-
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Professional Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#activities">Extra-Curricular Activities</a></li>
-        <li><a href="#community">Community Service</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm Maaheen Yasin, a passionate data scientist and software engineer with a drive to create real-world impact through technology. Currently pursuing my Master's in Professional Computer Science with a major in Visual Computing at Simon Fraser University, I specialize in machine learning, deep learning, and scalable cloud solutions. My journey has taken me from academic projects in computer vision and cloud native technologies to professional experience modernizing data infrastructure at a global fintech company.</p>
-      <p>I thrive on solving complex problems, whether it's building intelligent systems for disaster recovery, designing microservices for the cloud, or leading teams to deliver innovative solutions. My toolkit includes Python, PyTorch, SQL, Apache Kafka, Docker, and Google Cloud Platform, and I'm always eager to learn new technologies and collaborate with others who share my enthusiasm for making a difference.</p>
-      <p>I'm driven by a relentless curiosity and a passion for turning ideas into reality. Whether it's collaborating with diverse teams, exploring cutting-edge technologies, or tackling complex challenges, I thrive on pushing boundaries and creating solutions that inspire and empower!</p>
-    </section>
-
-<section id="skills">
-  <h2>Skills</h2>
+<!-- Navigation Bar -->
+<nav class="navbar reveal">
   <ul>
-    <li><strong>Programming Languages:</strong> Python, C++</li>
-    <li><strong>Machine Learning & Deep Learning:</strong> PyTorch, Pandas, NumPy, Matplotlib, Scikit-learn, Supervised/Unsupervised Learning (Classification, Clustering), Model Optimization (Linear & Non-Linear) </li>
-    <li><strong>Data Engineering:</strong> Apache Kafka, ETL Pipelines, SQL, PostgreSQL, RDBMS (Informix, Greenplum), Data Quality </li>
-    <li><strong>Cloud & DevOps:</strong> Microservices, Docker, Google Cloud Platform (Cloud Run, Kubernetes Engine, Compute Engine) </li>
-    <li><strong>Development Tools:</strong> Visual Studio, Visual Studio Code, Google Colab, Jupyter Notebook, Jira, Bitbucket (CI/CD), Git </li>
-    <li><strong>Software Development Methodologies:</strong> Agile, Scrum, Software Development Life Cycle (SDLC) </li>
-    <li><strong>Soft Skills:</strong> Strategic problem-solving, Effective cross-functional collaboration, Clear and persuasive communication, technical mentorship, Adaptability in fast-paced environments, and a genuine passion for driving innovation and continuous learning.</li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Professional Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#activities">Extra-Curricular Activities</a></li>
+    <li><a href="#community-service">Community Service</a></li>
+    <li><a href="#interests">Interests</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero reveal" id="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>
+        <span class="hero-line">Hello, I'm <span class="gradient-text">Maaheen Yasin</span></span>
+      </h1>
+      <p class="subtitle">Visual Computing Graduate Student at Simon Fraser University</p>
+      <p class="subtitle">Aspiring Data Scientist & Software Engineer (Canadian Citizen)</p>
+      <p class="tagline">From Algorithms to Applications — Crafting Tomorrow's Technology Today</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section class="about-me reveal" id="about">
+  <h2 class="about-heading">About Me</h2>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="assets/profile.jpg" alt="Profile Picture of Maaheen Yasin">
+    </div>
+    <div class="about-text">
+      <p>Hi, I'm <strong>Maaheen Yasin</strong>, a passionate <strong>data scientist</strong> and <strong>software engineer</strong> with a drive to create real-world impact through technology. Currently pursuing my <strong>Master's in Professional Computer Science</strong> with a major in <strong>Visual Computing</strong> at Simon Fraser University, and I specialize in <strong>machine learning</strong>, <strong>deep learning</strong>, and <strong>scalable cloud solutions</strong>.</p>
+      <p>My journey has taken me from academic projects in <strong>computer vision</strong> and <strong>cloud native technologies</strong> to professional experience <strong>modernizing data infrastructure</strong> at a global fintech company.</p>
+      <p>I thrive on <strong>solving complex problems</strong>, whether it's building intelligent systems for disaster recovery, designing microservices on cloud, or leading teams to deliver innovative solutions. My toolkit includes <strong>Python</strong>, <strong>PyTorch</strong>, <strong>C++</strong>, <strong>SQL</strong>, <strong>Apache Kafka</strong>, <strong>Docker</strong>, and <strong>Google Cloud Platform</strong>, and I'm always eager to <strong>learn new technologies</strong> and <strong>collaborate</strong> with others who share my enthusiasm for making a difference.</p>
+      <p>I'm driven by a relentless curiosity and a passion for turning ideas into reality. Whether it's <strong>collaborating with diverse teams</strong>, exploring <strong>cutting-edge technologies</strong>, or tackling <strong>complex challenges</strong>, I thrive on pushing boundaries and creating solutions that inspire and empower!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>C++</li>
+      </ul>
+      <div class="skill-logos">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" title="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" title="C++">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Machine Learning & Deep Learning</h3>
+      <ul>
+        <li>PyTorch, Pandas, NumPy, Matplotlib, Scikit-learn</li>
+        <li>Supervised/Unsupervised Learning (Classification, Clustering)</li>
+        <li>Model Optimization (Linear & Non-Linear)</li>
+      </ul>
+      <div class="skill-logos">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" title="Matplotlib">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" title="Scikit-learn">
+      </div>
+
+    </div>
+    <div class="skill-card">
+      <h3>Data Engineering</h3>
+      <ul>
+        <li>Apache Kafka, ETL Pipelines</li>
+        <li>SQL, PostgreSQL</li>
+        <li>RDBMS (Informix, Greenplum)</li>
+        <li>Data Quality</li>
+      </ul>
+      <div class="skill-logos">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka" title="Apache Kafka">
+        <img src="https://img.icons8.com/fluency/48/sql.png" alt="SQL" title="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+        <img src="https://www.logo.wine/a/logo/IBM_Informix/IBM_Informix-Logo.wine.svg" alt="Informix" title="IBM Informix" />
+        <img src="https://www.vectorlogo.zone/logos/greenplum/greenplum-icon.svg" alt="Greenplum" title="Greenplum" />
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Cloud & DevOps</h3>
+      <ul>
+        <li>Microservices, Docker</li>
+        <li>Google Cloud Platform</li>
+        <li>Cloud Run, Kubernetes Engine, Compute Engine</li>
+      </ul>
+        <div class="skill-logos">
+          <img src="assets/docker.webp" alt="Docker" title="Docker" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" title="Google Cloud Platform" />
+          <img src="assets/Cloud_Run.png" alt="Cloud Run" title="Cloud Run" />
+          <img src="assets/GKE.png" alt="Kubernetes" title="Kubernetes Engine" />
+          <img src="assets/Compute_Engine.png" alt="Compute Engine" title="Compute Engine" />
+        </div>
+    </div>
+    <div class="skill-card">
+      <h3>Development Tools</h3>
+      <ul>
+        <li>Visual Studio, Visual Studio Code</li>
+        <li>Google Colab, Jupyter Notebook</li>
+        <li>Jira, PuTTY (Terminal for SSH), Bitbucket (CI/CD), Git</li>
+      </ul>
+      <div class="skill-logos">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code" />
+        <img src="assets/colab.png" alt="Google Colab" title="Google Colab" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" title="Jira" />
+        <img src="assets/putty.png" alt="PuTTY" title="PuTTY" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
+      </div>
+
+    </div>
+    <div class="skill-card">
+      <h3>Software Development Methodologies</h3>
+      <ul>
+        <li>Agile, Scrum</li>
+        <li>Software Development Life Cycle (SDLC)</li>
+      </ul>
+        <div class="skill-logos">
+          <img src="assets/agile.png" alt="Agile/Scrum" title="Agile/Scrum" />
+          <img src="assets/sdlc.png" alt="Software Development Life Cycle" title="Software Development Life Cycle" />
+        </div>
+    </div>
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Strategic Problem Solving</li>
+        <li>Cross-functional Collaboration</li>
+        <li>Adaptability & Innovation</li>
+      </ul>
+        <div class="skill-logos">
+          <img src="assets/prob.webp" alt="Problem Solving" title="Strategic Problem Solving" />
+          <img src="assets/cross.png" alt="Collaboration" title="Cross-functional Collaboration" />
+          <img src="assets/inno.png" alt="Adaptability and Innovation" title="Adaptability & Innovation" />
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card-container scroll-animate">
+      <div class="project-card">
+        <!-- Front -->
+        <div class="project-card-front">
+          <img src="assets/pro_disaster.png" alt="Building Damage Assessment" class="project-image" />
+          <h3 class="project-title">Building Damage Assessment Using Satellite Imagery</h3>
+        </div>
+
+        <!-- Back -->
+        <div class="project-card-back">
+          <h3 class="project-title">Building Damage Assessment Using Satellite Imagery</h3>
+          <p class="project-role">Team Member (3 Members)</p>
+          <p class="project-tech">Python, PyTorch, SAM2, Edge Aware Loss</p>
+          <p class="project-summary">
+            Trained and optimized the DAHiTrA model to assess building damage from satellite imagery post-disaster. Addressed key challenges like domain generalization, dense urban building merging, and small structure underrepresentation. Integrated Edge Aware Loss (F1: 0.903, IoU: 0.834) and developed a SAM2-based boundary refinement pipeline for improved segmentation in dense areas.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Maaheen11/Building-Damage-Assessment-II" target="_blank" class="glow-btn">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card-container scroll-animate">
+      <div class="project-card">
+        <!-- Front -->
+        <div class="project-card-front">
+          <img src="assets/pro_weather.png" alt="Weather Notification System" class="project-image" />
+          <h3 class="project-title">Scalable Microservices-Based Weather Notification System</h3>
+        </div>
+
+        <!-- Back -->
+        <div class="project-card-back">
+          <h3 class="project-title">Scalable Microservices-Based Weather Notification System</h3>
+          <p class="project-role">Team Member (5 Members)</p>
+          <p class="project-tech">Python (Flask), Docker, Google Cloud Platform, Cloud Run, Kubernetes Engine, Compute Engine, RESTful APIs, BigQuery, Google Cloud Monitoring</p>
+          <p class="project-summary">
+            Designed and implemented a scalable weather notification system using microservices architecture, with each service containerized in Docker and deployed across Cloud Run, Google Kubernetes Engine, and Compute Engine. Leveraged Google Cloud Monitoring to benchmark performance, analyze resource utilization, and explored trade-offs across serverless, containerized, and VM-based environments.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Maaheen11/WeatherNotificationService" target="_blank" class="glow-btn">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="project-card-container scroll-animate">
+      <div class="project-card">
+        <!-- Front -->
+        <div class="project-card-front">
+          <img src="assets/pro_ddpm.png" alt="Image Generation With DDPM" class="project-image" />
+          <h3 class="project-title">Image Generation With Denoising Diffusion Probabilistic Model (DDPM)</h3>
+        </div>
+
+        <!-- Back -->
+        <div class="project-card-back">
+          <h3 class="project-title">Image Generation With Denoising Diffusion Probabilistic Model (DDPM)</h3>
+          <p class="project-role">Graduate Coursework</p>
+          <p class="project-tech">Python, PyTorch, NumPy, Matplotlib, Diffusion Models, U-Net, Deep Learning</p>
+          <p class="project-summary">
+            Implemented a DDPM using PyTorch  based on the original paper Denoising Diffusion Probabilistic Models by Ho et al, designing both forward and reverse diffusion processes and a custom time-conditioned U-Net. Successfully trained on the AFHQ dataset, achieving an FID of 24.43 and demonstrating stable convergence with limited computing resources.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Maaheen11/Image_Generation_With_Diffusion_Model" target="_blank" class="glow-btn">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Project 4 -->
+    <div class="project-card-container scroll-animate">
+      <div class="project-card">
+        <!-- Front -->
+        <div class="project-card-front">
+          <img src="assets/pro_covid.png" alt="COVID-19 SOPs Compliance System" class="project-image" />
+          <h3 class="project-title">An-Automated COVID-19 SOPs Monitoring and Management System</h3>
+        </div>
+
+        <!-- Back -->
+        <div class="project-card-back">
+          <h3 class="project-title">An-Automated COVID-19 SOPs Monitoring and Management System</h3>
+          <p class="project-role">Team Lead (3 Members & 2 Supervisors)</p>
+          <p class="project-tech">Python, CNN, MobileNetv2, YOLO, MediaPipe Library, Embedded Systems, NVIDIA Jetson Nano, Arduino Uno, IoT Sensors</p>
+          <p class="project-summary">
+            Spearheaded and developed an automated COVID-19 SOPs compliance system using computer vision and IoT sensors for real-time mask detection, social distancing, and vital sign monitoring. Deployed CNN for face mask detection and MobileNetV2 for social distancing monitoring on NVIDIA Jetson Nano, achieving 90.1% accuracy. Recognized among the top 4 of 28 capstone submissions and showcased at SOFTEC 2022, NUCES' premier tech competition.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Maaheen11/An-Automated-COVID-19-SOPs-Monitoring-and-Management-System" target="_blank" class="glow-btn">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card-container scroll-animate">
+      <div class="project-card">
+        <!-- Front -->
+        <div class="project-card-front">
+          <img src="assets/pro_website.PNG" alt="Personal Portfolio Website" class="project-image" />
+          <h3 class="project-title">Personal Portfolio Website</h3>
+        </div>
+
+        <!-- Back -->
+        <div class="project-card-back">
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-role">Individual Project</p>
+          <p class="project-tech">HTML, CSS, JavaScript</p>
+          <p class="project-summary">
+            Interested in seeing the behind the scenes of this website? Check out the source code on GitHub!
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Maaheen11/Maaheen11.github.io" target="_blank" class="glow-btn">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </section>
 
 
-    <section id="projects">
-      <h2>Project Portfolio</h2>
-            <h3>Building Damage Assessment Using Satellite Imagery for Large Natural Disasters</h3>
-            <p><strong>Role:</strong> Team Member</p>
-            <p><strong>Tech Stack:</strong> Python, PyTorch, NumPy, Matplotlib, Computer Vision, Segment Anything Model v2 (SAM2), Edge Aware Loss</p>
-            <p>Trained and optimized the DAHiTrA model for post-disaster building damage assessment using satellite imagery, effectively addressing existing challenges such as domain generalization, merging densely packed buildings in urban regions, and underrepresenting smaller structures in damage assessments. Improved segmentation accuracy by integrating Edge Aware Loss (F1-score: 0.903, IoU: 0.834) and implemented a SAM2-based boundary refinement pipeline to enhance building separation in dense urban areas, enabling more precise damage mapping for disaster response. This project demonstrated the real-world impact of AI in disaster response and recovery.</p>
+<!-- Professional Experience Section -->
+<section id="experience" class="experience-section">
+  <h2 class="section-title scroll-animate">Professional Experience</h2>
+  <div class="timeline">
 
-            <h3>Scalable Microservices-Based Weather Notification System</h3>
-            <p><strong>Role:</strong> Team Member</p>
-            <p><strong>Tech Stack:</strong> Python (Flask), Docker, Google Cloud Platform, Cloud Run, Google Kubernetes Engine (GKE), Compute Engine, RESTful APIs, BigQuery, Google Cloud Monitoring</p>
-            <p>Designed and implemented a scalable weather notification system using microservices architecture, with each service containerized in Docker and deployed across Cloud Run, Google Kubernetes Engine, and Compute Engine. Leveraged Google Cloud Monitoring to benchmark performance, analyze resource utilization, and explored trade-offs across serverless, containerized, and VM-based environments.</p>
-    
-            <h3>Image Generation With Denoising Diffusion Probabilistic Model (DDPM)</h3>
-            <p><strong>Graduate Coursework</strong></p>
-            <p><strong>Tech Stack:</strong> Python, PyTorch, NumPy, Matplotlib, Diffusion Models, U-Net, Deep Learning</p>
-            <p>Implemented a DDPM using PyTorch  based on the original paper Denoising Diffusion Probabilistic Models by Ho et al, designing both forward and reverse diffusion processes and a custom time-conditioned U-Net. Successfully trained on the AFHQ dataset, achieving an FID of 24.43 and demonstrating stable convergence with limited computing resources.</p>
+    <!-- First Role -->
+    <div class="timeline-item scroll-animate">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="company-header">
+          <img src="assets/comp_logo.webp" alt="i2c Inc. logo" class="company-logo" />
+          <h3 class="company-name">i2c Inc.</h3>
+        </div>
+        <p class="company-description">Global FinTech Provider of B2B payment solutions for big clients like CIBC, Mastercard, and Visa.</p>
+        <h4 class="role-title">Software Engineer (Data Engineering Team)</h4>
+        <span class="role-date">Jan 2023 – Jul 2024</span>
+        <ul class="role-points">
+          <li>Led the development of a proof-of-concept to modernize batch data pipelines using Apache Kafka, significantly improving data processing speed and efficiency for financial reporting.</li>
+          <li>Collaborated with 4 cross-functional teams to design, implement, and test scalable data workflows for high-volume financial streams, enabling real-time analytics and data-driven decisions.</li>
+          <li>Authored 8+ technical documentation and operational protocols to support onboarding and cross-team collaboration within an Agile/Scrum environment.</li>
+          <li>Resolved a production data quality issue by tracing it to misconfigured ETL settings; led automation of configuration scripts with a junior engineer, reducing onboarding effort by 48% and ensuring accurate data synchronization.</li>
+        </ul>
+      </div>
+    </div>
 
-            <h3>An-Automated COVID-19 SOPs Monitoring and Management System</h3>
-            <p><strong>Role:</strong> Team Lead</p>
-            <p><strong>Tech Stack:</strong> Python, CNN, MobileNetv2, YOLO, MediaPipe Library, Embedded Systems, Computer Vision, Deep Learning, NVIDIA Jetson Nano microprocessor, Arduino Uno, IoT Sensors (InfraRed Thermal Sensor, SpO2 sensor, Sonar sensor)</p>
-            <p>Spearheaded the development of a fully automated COVID-19 SOPs compliance system, integrating computer vision and IoT sensors to automate mask detection, social distancing, and vital sign monitoring. Deployed CNN for face mask detection and MobileNetV2 for social distancing monitoring on NVIDIA Jetson Nano and achieved 90.1% accuracy for real-time compliance monitoring. The project was recognized among the top 4 of 28 capstone submissions and showcased at SOFTEC 2022, NUCES' premier tech competition.</p>
-    
-        </section>
+    <!-- Second Role -->
+    <div class="timeline-item scroll-animate">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <!-- No company name again -->
+        <h4 class="role-title">Associate Engineer (Business Intelligence Team)</h4>
+        <span class="role-date">Jul 2022 – Dec 2022</span>
+        <ul class="role-points">
+          <li>Developed and optimized 13+ SQL views and tables to extract and transform financial data into actionable insights to deliver actionable business intelligence for enterprise clients.</li>
+          <li>Ensured data quality in the data warehouse by troubleshooting and resolving issues such as data duplication and gaps using PostgreSQL scripts and ETL workflows to maintain accurate CFO and Billing reports.</li>
+          <li>Collaborated on test-driven development of ETL workflows and financial reporting by designing and executing 12+ unit, system, and regression tests, ensuring consistent high-quality deliverables.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section id="experience">
-      <h2>Professional Experience</h2>
-        <h3>i2c Inc.</h3>
-        <p><em>Global fintech provider of B2B payment solutions for big clients like CIBC, Mastercard, and Visa.</em></p>
+  </div>
+</section>
 
-    <h4>Software Engineer, Data Engineering Team</h4>
-    <p><em>Jan 2023 - Jul 2024</em></p>
-    <ul>
-      <li>Led the development of a proof-of-concept to modernize batch data pipelines using Apache Kafka, significantly improving data processing speed and efficiency for financial reporting.</li>
-      <li>Collaborated with 4 cross-functional teams to design, implement, and test scalable data workflows for high-volume financial streams, enabling real-time analytics and data-driven decisions.</li>
-      <li>Authored 8+ technical documentation and operational protocols to support onboarding and cross-team collaboration within an Agile/Scrum environment.</li>
-      <li>Resolved a production data quality issue by tracing it to misconfigured ETL settings; led automation of configuration scripts with a junior engineer, reducing onboarding effort by 48% and ensuring accurate data synchronization.</li>
+<!-- Education Section -->
+<section id="education" class="education-section">
+  <h2 class="section-title-edu scroll-animate">Education</h2>
+  <div class="timeline">
+
+    <!-- SFU -->
+    <div class="timeline-item scroll-animate">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content education-box">
+        <div class="company-header">
+          <img src="assets/sfu_logo.png" alt="SFU logo" class="company-logo" />
+          <h3 class="company-name">Simon Fraser University (SFU)</h3>
+        </div>
+        <h4 class="role-title">Master’s in Professional Computer Science - Visual Computing</h4>
+        <span class="role-date">Sep 2024 - Dec 2026 (Expected)</span>
+        <ul class="role-points">
+          <li><strong>Concentrations:</strong> Computer Vision, Deep Learning</li>
+          <li><strong>Related Coursework:</strong> Machine Learning, Visual Computing, Distributed & Cloud Systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAST-NUCES -->
+    <div class="timeline-item scroll-animate">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content education-box">
+        <div class="company-header">
+          <img src="assets/nuces_logo.png" alt="FAST-NUCES logo" class="company-logo" />
+          <h3 class="company-name">National University of Computer & Emerging Sciences (FAST-NUCES)</h3>
+        </div>
+        <h4 class="role-title">Bachelor of Science in Electrical Engineering</h4>
+        <span class="role-date">Sep 2018 – Jul 2022</span>
+        <ul class="role-points">
+          <li><strong>Concentration:</strong> Computer Engineering</li>
+          <li><strong>Related Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming, Database Fundamentals, Data Communication & Networks</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Awards Section -->
+<section id="awards" class="reveal">
+  <h2>Awards & Achievements</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3><i class="fas fa-medal"></i> Silver Medalist for Academic Excellence</h3>
+      <li class="award-org">National University of Computer & Emerging Sciences (FAST-NUCES)</li>
+      <ul>
+      <li>Recognized as 1st runner-up in academic performance for Spring 2022 semester.</li>
+        <li>Awarded a silver medal and cash prize.</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3><i class="fas fa-scroll"></i> Dean’s List Honor Roll Recipient (Spring 2022)</h3>
+      <li class="award-org">National University of Computer & Emerging Sciences (FAST-NUCES)</li>
+      <ul>
+        <li>Awarded for achieving an GPA of 3.91 in the Spring 2022 semester.</li>
+        <li>Name published on the official Dean’s List and received a certificate of recognition.</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3><i class="fas fa-code"></i> Champion, Intra-FAST Programming Competition</h3>
+      <li class="award-org">NUCES ACM Society</li>
+      <ul>
+        <li>Secured first place in a high-intensity, team-based coding competition using C++.</li>
+        <li>Recognized as “Maestro Coder” for exceptional problem-solving speed and accuracy, and awarded a cash prize.</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3><i class="fas fa-robot"></i> Champion, Elementary Robotics Workshop</h3>
+      <li class="award-org">NUCES IEEE Society</li>
+      <ul>      
+        <li>Engineered a line-following robot using Arduino Uno and infrared sensors.</li>
+        <li>Achieved first place in the workshop’s robotics race, recognized for best speed and precision.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Extra-Curricular Activities -->
+<section id="activities" class="experience-section">
+  <h2 class="section-title scroll-animate">Extra-Curricular Activities</h2>
+
+  <div class="activities-block scroll-animate">
+    <h3 class="activities-title"><i class="fas fa-laptop-code"></i> Hackathons & Competitions</h3>
+    <div class="divider-line"></div>
+    <ul class="activities-list formatted-list">
+      <li>
+        <span class="event-title">Software Project Competition, SOFTEC 2022 (FAST-NUCES)</span>
+        <p class="event-description">Presented the capstone project, An Automated COVID-19 SOPs Compliance System, as a team of 3 to the panel of judges, software companies, and the public at NUCES’ signature tech competition, competing against 30+ teams nationwide.</p>
+      </li>
+      <li>
+        <span class="event-title">Programming Competition, SOFTEC 2021 (FAST-NUCES)</span>
+        <p class="event-description">Participated as a team of two, solving data structures and algorithms problems in C++ under timed conditions. Challenged to solve problems quickly and accurately in a competitive environment.</p>
+      </li>
+      <li>
+        <span class="event-title">Programming Competition, UET Technical Symposium</span>
+        <p class="event-description">Competed individually in a virtual inter-university programming contest, solving data structures and algorithms problems in C++ under timed conditions.</p>
+      </li>
+      <li>
+        <span class="event-title">Tech Wars & Math Geeks, PSIFI X (LUMS)</span>
+        <p class="event-description">Collaborated with a team of four in PSIFI X at LUMS, tackling the Tech Wars coding competition (Visual Basic) and the Math Geeks math problem-solving competition.</p>
+      </li>
     </ul>
+  </div>
 
-    <h4>Associate Engineer, Business Intelligence Team</h4>
-    <p><em>Jul 2022 - Dec 2022</em></p>
-    <ul>
-      <li>Developed and optimized 13+ SQL views and tables to extract and transform financial data into actionable insights to deliver actionable business intelligence for enterprise clients.</li>
-      <li>Ensured data quality in the data warehouse by troubleshooting and resolving issues such as data duplication and gaps using PostgreSQL scripts and ETL workflows to maintain accurate CFO and Billing reports.</li>
-      <li>Collaborated on test-driven development of ETL workflows and financial reporting by designing and executing 12+ unit, system, and regression tests, ensuring consistent high-quality deliverables.</li>
+  <div class="activities-block scroll-animate">
+    <h3 class="activities-title"><i class="fas fa-chalkboard-teacher"></i> Educational Workshops</h3>
+    <div class="divider-line"></div>
+    <ul class="activities-list formatted-list">
+      <li>
+        <span class="event-title">Amazon Web Services (AWS) Reachback</span>
+        <p class="event-description">Gained hands-on experience with AWS at an event dedicated to empowering women in STEM. Explored Amazon’s leadership principles, the Solution Architect role, and career journeys. Participated in a Generative AI workshop covering foundational models, and Retrieval-Augmented Generation (RAG), implementing RAG with Amazon Bedrock and SageMaker. Built dynamic business intelligence dashboards using Amazon QuickSight.</p>
+      </li>
+      <li>
+        <span class="event-title">Amazon Web Services (AWS) Cloud Seminars</span>
+        <p class="event-description">Attended a comprehensive AWS Cloud Seminar featuring workshops on AI/ML and Generative AI. Explored foundational models and Retrieval-Augmented Generation (RAG) using Amazon SageMaker, and learned to leverage Amazon Bedrock for building practical GenAI applications.</p>
+      </li>
+      <li>
+        <span class="event-title">Internet of Things Bootcamp</span>
+        <p class="event-description">Developed hands-on skills in IoT device integration and prototyping through a solo project.</p>
+      </li>
+      <li>
+        <span class="event-title">Learning Python Workshop</span>
+        <p class="event-description">Acquired foundational Python programming skills via interactive workshop sessions.</p>
+      </li>
+      <li>
+        <span class="event-title">Machine Learning with Python Workshop</span>
+        <p class="event-description">Explored core machine learning concepts and implemented models in Python.</p>
+      </li>
+      <li>
+        <span class="event-title">Graphic Design Workshop</span>
+        <p class="event-description">Enhanced creative design abilities using Adobe Photoshop; independently designed posters and visual content.</p>
+      </li>
     </ul>
-    </section>
+  </div>
 
-    <section id="education">
-      <h2>Education</h2>
-        <h3>Simon Fraser University, Burnaby, Canada</h3>
-        <p><em>Master's in Professional Computer Science - Visual Computing</em> | Expected Graduation: Dec 2026</p>
-        <p>Concentrations: Computer Vision, Deep Learning</p>
-        <p>Relevant Coursework: Machine Learning, Visual Computing, Distributed & Cloud Systems</p>
+  <div class="activities-block scroll-animate">
+    <h3 class="activities-title"><i class="fas fa-brain"></i> Mathematics & Linguistic Contests</h3>
+    <div class="divider-line"></div>
+    <ul class="activities-list formatted-list">
+      <li>
+        <span class="event-title">International Kangaroo Mathematics Contest (IKMC)</span>
+        <p class="event-description">Competed at multiple academic levels in this global mathematics competition, solving problems from basic to advanced.</p>
+      </li>
+      <li>
+        <span class="event-title">International Kangaroo Linguistic Contest (IKLC)</span>
+        <p class="event-description">Solved complex linguistic challenges individually in an internationally recognized contest.</p>
+      </li>
+    </ul>
+  </div>
+</section>
 
+<!-- Community Service Section -->
+<section id="community-service" class="section scroll-animate">
+  <h2 class="section-title">Community Service</h2>
 
-        <h3>National University of Computer & Emerging Sciences (FAST-NUCES)</h3>
-        <p><em>Bachelor of Science in Electrical Engineering</em> | Sep 2018 - Jul 2022</p>
-        <p>Concentration: Computer Engineering</p>
-        <p>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Fundamentals, Data Communication & Networks</p>
-    </section>
-
-    <section id="awards">
-      <h2>Awards</h2>
-        <ul>
-
-    <li>
-      <strong>Silver Medalist for Academic Excellence</strong><br>
-      <em>National University of Computer & Emerging Sciences | Oct 2022</em><br>
-      Awarded for securing the first runner-up position in academic performance (Spring 2022), along with a cash prize.
-    </li>
-
-    <li>
-      <strong>Dean's List</strong><br>
-      <em>National University of Computer & Emerging Sciences | Spring 2022</em><br>
-      Recognized for achieving an SGPA above 3.5. Name published on the official NUCES website under Dean's List Spring 2022.
-    </li>
-
-    <li>
-      <strong>Intra-FAST Programming Competition - 1st Place</strong><br>
-      <em>NUCES ACM Society | Nov 2018</em><br>
-      Secured first place in a rapid programming challenge with a team of 3, earning the “Maestro Coder” title and a cash prize.
-    </li>
-
-    <li>
-      <strong>Elementary Robotics Workshop - 1st Place</strong><br>
-      <em>NUCES IEEE Society | Oct 2018</em><br>
-      Secured first place with a line-following robot that won the race for accuracy and speed.
-    </li>
-  </ul>
-    </section>
-
-    <section id="activities">
-      <h2>Extra-Curricular Activities & Competitions</h2>
-       <ul>
-    <li>
-      <strong>University-Level Competitions</strong>
-      <ul>
-        <li>Software Project Competition, SOFTEC (FAST-NUCES)</li>
-        <li>Programming Competition, SOFTEC (FAST-NUCES)</li>
-        <li>Programming Competition, UET Technical Symposium (University of Engineering & Technology)</li>
-        <li>Tech Wars & Math Geeks, PSIFI X (LUMS)</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Educational Workshops</strong>
-      <ul>
-        <li>Internet of Things Bootcamp</li>
-        <li>Learning Python Workshop</li>
-        <li>Machine Learning with Python Workshop</li>
-        <li>Graphic Designing Workshop</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Mathematics & Linguistics Contests</strong>
-      <ul>
-        <li>International Kangaroo Mathematics Contest (IKMC) - Multiple levels</li>
-        <li>International Kangaroo Linguistic Contest (IKLC)</li>
-      </ul>
-    </li>
-  </ul>
-    </section>
-
-    <section id="community">
-      <h2>Community Service</h2>
-      <ul>
-    <li>
-      <strong>Volunteer Researcher, Anti-Plastic Ambassador Program</strong><br>
-      <em>Environment Society | Jan 2017 - Feb 2017</em><br>
-      Collaborated with a team of 8 to research plastic consumption and its environmental impact. Co-authored a comprehensive thesis, conducted public surveys, and presented actionable solutions to reduce plastic use, advocating for sustainable policies.
-    </li>
-    <li>
-      <strong>Community Volunteer, SOS Saturday's Initiative</strong><br>
-      <em>Parbat Foundation | Apr 2017</em><br>
-      Led creative arts and crafts sessions at SOS Children's Villages, inspiring children through hands-on activities and transforming spaces with collaborative art projects, fostering a joyful and inclusive environment.
-    </li>
-    <li>
-      <strong>Charity Fundraising Volunteer, Community Club</strong><br>
-      Organized bake sales and fundraising events, engaging the public to raise funds for various charitable causes and support local community initiatives.
-    </li>
-  </ul>
-    </section>
-
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: mya144@sfu.ca</p>
-      <p>Phone: +1 (647)-918-5674</p>
-      <p>
-        <a href="https://github.com/Maaheen11">GitHub</a> |
-        <a href="https://www.linkedin.com/in/maaheen-yasin">LinkedIn</a>
+  <div class="community-cards">
+    <div class="community-card">
+      <h3 class="community-role"><i class="fas fa-leaf"></i> Volunteer Researcher</h3>
+      <p class="community-org">Anti-Plastic Ambassador Program (Environment Society)</p>
+      <p class="community-desc">
+        Collaborated with a team of 8 to research plastic consumption and its environmental impact, co-authoring a thesis, conducting public surveys, and presenting actionable solutions to promote sustainable policies.
       </p>
-    </section>
-  </main>
+    </div>
 
-  <button id="backToTop">↑ Top</button>
+    <div class="community-card">
+      <h3 class="community-role"><i class="fas fa-hand-holding-heart"></i> Community Volunteer</h3>
+      <p class="community-org">SOS Saturday's Initiative (Parbat Foundation)</p>
+      <p class="community-desc">
+        Led an arts and crafts session at the SOS Children’s Villages, inspiring children through creative activities and decorating the library door with a collaborative snowman art project to foster an inclusive, joyful environment.
+      </p>
+    </div>
+
+    <div class="community-card">
+      <h3 class="community-role"><i class="fas fa-donate"></i> Charity Fundraising Volunteer</h3>
+      <p class="community-org">Community Club</p>
+      <p class="community-desc">
+        Participated in bake sales and fundraising events, engaging the community to support local charitable initiatives and causes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Interests -->
+<section id="interests" class="experience-section">
+  <h2 class="section-title scroll-animate">Interests</h2>
+
+  <div class="interests-block scroll-animate">
+    <h3 class="interests-title">Novel Reading</h3>
+    <div class="divider-line"></div>
+    <p class="interests-description">
+      A big fan of fantasy novels, with favorites including the ACOTAR series, Divergent series, and The Cruel Prince series.
+    </p>
+  </div>
+
+  <div class="interests-block scroll-animate">
+    <h3 class="interests-title">Canvas Painting of Nature</h3>
+    <div class="divider-line"></div>
+    <p class="interests-description">
+      Love to paint nature landscapes on canvas with acrylics. A couple of artwork samples are showcased here, with all images protected and not to be reshared or used without permission. Thanks!
+    </p>
+
+    <div class="painting-gallery">
+      <img src="assets/sample1.jpg" alt="Acrylic Nature Painting 1" class="painting-image">
+      <img src="assets/sample2.jpg" alt="Acrylic Nature Painting 2" class="painting-image">
+    </div>
+
+  </div>
+
+  <div class="interests-block scroll-animate">
+    <h3 class="interests-title">Hiking and Nature Walks</h3>
+    <div class="divider-line"></div>
+    <p class="interests-description">
+      Enjoy spending time outdoors, whether on a hike or a casual walk in nature, to unwind and recharge.
+    </p>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section reveal" id="contact">
+  <div class="contact-container">
+    <div class="contact-text">
+      <h1 class="gradient-title">Let’s <span class="gradient-word">Connect</span></h1>
+      <p class="caption">I'd love to hear from you — whether it's for opportunities, collaboration, or just to say Hi!</p>
+    </div>
+
+    <div class="contact-icons">
+      <div class="contact-item">
+        <a href="mailto:mya144@sfu.ca" target="_blank">
+          <i class="fas fa-envelope icon"></i>
+        </a>
+        <p class="contact-subtext">mya144@sfu.ca</p>
+      </div>
+      <div class="contact-item">
+        <a href="tel:+16479185674" target="_blank">
+          <i class="fas fa-phone-alt icon"></i>
+        </a>
+        <p class="contact-subtext">+1 (647)-918-5674</p>
+      </div>
+      <div class="contact-item">
+        <a href="https://github.com/Maaheen11" target="_blank">
+          <i class="fab fa-github icon"></i>
+        </a>
+        <p class="contact-subtext">github.com/Maaheen11</p>
+      </div>
+      <div class="contact-item">
+        <a href="https://www.linkedin.com/in/maaheen-yasin" target="_blank">
+          <i class="fab fa-linkedin icon"></i>
+        </a>
+        <p class="contact-subtext">linkedin.com/in/maaheen-yasin</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript Files -->
+<script src="script.js"></script>
+
 </body>
 </html>
+
+
