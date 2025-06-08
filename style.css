@@ -1,6 +1,6 @@
 /* General Body Styling */
 body {
-  background: linear-gradient(180deg, #0d1b2a, #000814);
+  background: linear-gradient(180deg, #0d1b2a, #000814); 
   color: #e0e0e0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -9,33 +9,33 @@ body {
   position: relative;
 }
 
-/* Universal Section Background */
-.section-wrapper {
-  background: linear-gradient(135deg, #0d1117, #0a1a2f, #001f3f);
-  border-top: 2px solid rgba(0, 100, 200, 0.2);
-  border-bottom: 2px solid rgba(0, 100, 200, 0.2);
-  position: relative;
-  z-index: 1;
+/* Reveal on Scroll */ 
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-
-/* Texture Overlay */
-body::before {
-  content: '';
+/* Background Particle Effect */ 
+#particles-bg {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Stay behind all other content */
   pointer-events: none;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.05;
-  z-index: -1;
 }
 
-
-@keyframes glowText {
-  0% { text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7; }
-  100% { text-shadow: 0 0 20px #c084fc, 0 0 30px #c084fc; }
+/* Smooth Scrolling To Sections Using Nav */ 
+html {
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -44,29 +44,32 @@ nav.navbar {
   top: 0; left: 0;
   width: 100%;
   background: rgba(20, 20, 35, 0.9);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 0;
   box-shadow: 0 2px 10px rgba(0, 255, 247, 0.15);
   z-index: 999;
+  overflow-x: hidden;
 }
 
 nav.navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 0; padding: 0;
+  flex-wrap: nowrap; 
+  gap: clamp(6px, 1vw, 14px);
+  margin: 0;
+  padding: 0 1rem;
 }
 
 nav.navbar ul li a {
   text-decoration: none;
   color: #00fff7;
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 8px 14px;
+  font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+  padding: clamp(4px, 0.8vw, 10px) clamp(8px, 1.5vw, 14px); 
   border-radius: 6px;
   text-shadow: 0 0 4px #00fff7;
   transition: background 0.3s ease;
+  white-space: nowrap; /
 }
 
 nav.navbar ul li a:hover {
@@ -75,22 +78,12 @@ nav.navbar ul li a:hover {
   box-shadow: 0 0 10px #00fff7;
 }
 
-/* Hero Section */
-.hero {
+
+/* Globe Formatting Section*/ 
+
+.container {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 20px;
-}
-
-
-.hero-container {
-  position: relative;
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +91,54 @@ nav.navbar ul li a:hover {
   justify-content: center;
   padding: 20px;
   gap: 40px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+/* -------------------------------- */ 
+
+/* Scroll Up Button */ 
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: cyan; /* SVG stroke color */
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00fff7, 0 0 40px #00fff7;
+}
+
+/* Visible state */
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* Hero Section */
+.hero {
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .hero-text {
@@ -116,14 +157,6 @@ nav.navbar ul li a:hover {
   text-align: center;
 }
 
-.hero h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 4px;
-  text-align: center;
-}
 
 .hero .hero-line {
   display: inline-block;
@@ -147,23 +180,19 @@ nav.navbar ul li a:hover {
 
 /* About Section */
 .about-me {
-  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .about-container {
-  display: flex;
-  flex-wrap: wrap;
   align-items: stretch;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
+
+.about-heading {
+  color: #3aa6ff;
+  text-shadow: 0 0 10px #1e90ff;
+}
+
 
 .about-image {
   flex: 1 1 300px;
@@ -176,15 +205,15 @@ nav.navbar ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-.about-image:hover {
-  transform: scale(1.05);
-}
-
+/* fitting the image inside the box */ 
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
 }
 
 .about-text {
@@ -221,35 +250,16 @@ nav.navbar ul li a:hover {
   text-shadow: 0 0 6px #00fff7;
 }
 
-.about-heading {
-  text-align: center;
-  font-size: 2.8rem;
-  color: #3aa6ff;
-  text-shadow: 0 0 10px #1e90ff;
-  margin-bottom: 40px;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #3aa6ff;
-  animation: glowText 3s ease-in-out infinite alternate;
-}
 
 /* Skills Section */
 #skills {
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #e0f7ff;
-  animation: slideIn 1s ease forwards;
 }
 
 #skills h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #c084fc;
   text-shadow: 0 0 12px #c084fc;
-  margin-bottom: 40px;
 }
 
 .skills-grid {
@@ -289,12 +299,13 @@ nav.navbar ul li a:hover {
   color: #cfe8ff;
 }
 
+/* Change Bullet Points Color */ 
 .skill-card ul li::marker {
   color: #00fff7;
 }
 
 .skill-card ul li {
-  font-size: 1.3rem; /* Increase from default */
+  font-size: 1.3rem; 
   font-weight: 600;
   color: #e0f7ff;
 }
@@ -319,62 +330,25 @@ nav.navbar ul li a:hover {
   filter: drop-shadow(0 0 10px #00fff7);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-  }
-  nav.navbar ul {
-    gap: 8px;
-  }
-  nav.navbar ul li a {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  .about-text {
-    font-size: 1rem;
-  }
-}
-
-#particles-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Stay behind all other content */
-  pointer-events: none;
-}
-
-
 /* Projects Section */ 
 
 .projects-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px; /* Increased spacing */
+  gap: 60px; 
   padding: 0 15px;
 }
 
 .project-card-container {
   perspective: 1000px;
   width: 100%;
-  margin-bottom: 30px; /* Extra spacing between rows */
+  margin-bottom: 30px; 
 }
 
 
@@ -443,14 +417,6 @@ nav.navbar ul li a:hover {
 }
 
 
-.project-card-back::-webkit-scrollbar {
-  width: 6px;
-}
-.project-card-back::-webkit-scrollbar-thumb {
-  background: #00fff7;
-  border-radius: 5px;
-}
-
 /* Project text & layout */
 .project-title {
   font-size: 1.35rem;
@@ -512,15 +478,11 @@ nav.navbar ul li a:hover {
 }
 
 #projects h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #3aa6ff;
   text-shadow: 0 0 10px #1e90ff;
-  margin-top: 90px;
-  margin-bottom: 40px;
 }
 
-
+/* For smaller screens, adjust the cards */ 
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -531,16 +493,13 @@ nav.navbar ul li a:hover {
 /* Experience Section */
 
 #experience h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #c084fc;
   text-shadow: 0 0 12px #c084fc;
-  margin-bottom: 40px;
 }
 
 .experience-section {
-  padding: 60px 20px;
-  max-width: 1200px; /* Match other sections */
+  padding: 20px 20px;
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
@@ -652,7 +611,7 @@ nav.navbar ul li a:hover {
 }
 
 .company-logo {
-  width: 60px;             /* increased size */
+  width: 60px;          
   height: 60px;
   object-fit: contain;
   display: block;
@@ -667,18 +626,6 @@ nav.navbar ul li a:hover {
   margin-bottom: 20px;
 }
 
-/* Glow on scroll */
-.timeline-item.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.timeline-item.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Education Section Title */
 
 .education-section {
@@ -689,12 +636,8 @@ nav.navbar ul li a:hover {
 
 
 #education h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #3aa6ff;
   text-shadow: 0 0 10px #1e90ff;
-  margin-top: 90px;
-  margin-bottom: 40px;
 }
 
 .section-title-edu {
@@ -705,35 +648,33 @@ nav.navbar ul li a:hover {
   margin-bottom: 40px;
 }
 
-/* Apply consistent, appealing text color styles to education boxes */
-
 .education-box {
   color: #e0f7ff; /* Default text color */
   font-size: 1.05rem;
 }
 
 .education-box .company-name {
-    color: #00fff7;
+  color: #00fff7;
   font-weight: bold;
 }
 
 .education-box .role-title {
-    color: #0ff3eb; /* Degree title - soft teal */
+  color: #0ff3eb; 
   font-weight: bold;
 }
 
 .education-box .role-date {
-  color: #a2e9ff;  /* Light cyan for dates */
+  color: #a2e9ff;  
 }
 
 .education-box .role-points {
-  font-size: 1.15rem; /* Slightly increased size for Concentration & Coursework */
-  color: #dffaff;     /* Consistent color for both label and content */
+  font-size: 1.15rem; 
+  color: #dffaff;   
 }
 
 .education-box .role-points li strong {
-  color: inherit;     /* Match rest of the text */
-  font-size: inherit; /* Uniform sizing */
+  color: inherit;     
+  font-size: inherit; 
   font-weight: 600;
 }
 
@@ -747,11 +688,8 @@ nav.navbar ul li a:hover {
 }
 
 #awards h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #c084fc;
   text-shadow: 0 0 12px #c084fc;
-  margin-bottom: 40px;
 }
 
 #awards .skill-card {
@@ -774,17 +712,17 @@ nav.navbar ul li a:hover {
 
 #awards .award-org {
   list-style: none;
-  padding-left: 0;     /* removes bullet padding */
-  font-size: 1.1rem;   /* slightly larger than other bullet points */
+  padding-left: 0;     
+  font-size: 1.1rem;  
   font-style: italic;
   font-weight: 500;
   color: #a3bffa;
   margin-bottom: 8px;
-  text-align: left;  /* keep left aligned */
+  text-align: left; 
 }
 
 #awards .skill-card h3 {
-  text-align: left !important;  /* force left alignment for title */
+  text-align: left !important;  
 
 }
 
@@ -805,15 +743,9 @@ nav.navbar ul li a:hover {
 }
 
 #activities h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #3aa6ff;
   text-shadow: 0 0 10px #1e90ff;
-  margin-top: 60px;
-  margin-bottom: 40px;
 }
-
-
 
 .activities-block:hover {
   transform: translateY(-6px);
@@ -826,8 +758,6 @@ nav.navbar ul li a:hover {
   font-size: 1.6rem;
   text-shadow: 0 0 6px #00fff7;
 }
-
-
 
 .divider-line {
   width: 100%;
@@ -844,18 +774,6 @@ nav.navbar ul li a:hover {
   line-height: 1.6;
   color: #a0eaff;
   text-align: justify;
-}
-
-/* Animation */
-.activities-block.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.activities-block.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Improved Hackathons formatting */
@@ -894,12 +812,9 @@ nav.navbar ul li a:hover {
   padding: 10px 20px;
 }
 
-#community-service .section-title {
-  text-align: center;
-  font-size: 2.8rem;
+#community-service h2 {
   color: #c084fc;
   text-shadow: 0 0 12px #c084fc;
-  margin-bottom: 40px;
 }
 
 .community-cards {
@@ -958,27 +873,10 @@ nav.navbar ul li a:hover {
   font-size: 1rem;
 }
 
-/* Animation */
-#community-service.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-#community-service.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* Interests Section */
 #interests h2 {
-  text-align: center;
-  font-size: 2.8rem;
   color: #3aa6ff;
   text-shadow: 0 0 10px #1e90ff;
-  margin-top: 60px;
-  margin-bottom: 40px;
 }
 
 .interests-block {
@@ -1010,17 +908,6 @@ nav.navbar ul li a:hover {
   text-align: justify;
 }
 
-.interests-block.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.interests-block.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .painting-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -1032,7 +919,7 @@ nav.navbar ul li a:hover {
 .painting-image {
   width: 100%;
   max-width: 300px;
-  height: auto; /* Maintains aspect ratio */
+  height: auto; 
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 255, 247, 0.2);

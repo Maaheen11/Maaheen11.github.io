@@ -1,24 +1,4 @@
-// Reveal on scroll animation
-function reveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  const windowHeight = window.innerHeight;
-  const revealPoint = 120;
-
-  for (let i = 0; i < reveals.length; i++) {
-    const revealTop = reveals[i].getBoundingClientRect().top;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add('active');
-    } else {
-      reveals[i].classList.remove('active');
-    }
-  }
-}
-
-window.addEventListener('scroll', reveal);
-window.addEventListener('load', reveal);
-
-
+//Background Particle Effect To Make It Look Like Stars! 
 tsParticles.load('particles-bg', {
   fullScreen: false,
   fpsLimit: 60,
@@ -70,45 +50,37 @@ tsParticles.load('particles-bg', {
       },
     },
   },
-  detectRetina: true,
 });
 
 
-// Scroll reveal animation for project cards (and other elements with .scroll-animate)
-  const scrollElements = document.querySelectorAll(".scroll-animate");
+// Scroll reveal animation for all elements with .scroll-animate
+const scrollElements = document.querySelectorAll(".scroll-animate");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-  });
-
-  scrollElements.forEach(el => observer.observe(el));
-
-// Accordion functionality for Extra-Curricular Activities
-const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-accordionHeaders.forEach(header => {
-  header.addEventListener('click', () => {
-    const content = header.nextElementSibling;
-    const isActive = header.classList.contains('active');
-
-    // Close all accordions
-    document.querySelectorAll('.accordion-header').forEach(h => {
-      h.classList.remove('active');
-      h.nextElementSibling.style.display = 'none';
-    });
-
-    // Toggle the clicked one
-    if (!isActive) {
-      header.classList.add('active');
-      content.style.display = 'block';
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
   });
+}, {
+  threshold: 0.1,
 });
 
+scrollElements.forEach(el => observer.observe(el));
+
+
+//Scroll Up Button Animation 
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  document.querySelector(".hero").scrollIntoView({ behavior: "smooth" });
+});
