@@ -588,7 +588,7 @@ h2 {
   }
 
   .project-card-front {
-    padding-bottom: 3rem; 
+    padding-bottom: 3rem;
     position: relative;
   }
 
@@ -613,19 +613,7 @@ h2 {
   }
 
   .project-card-back::after {
-    content: "Tap to flip";
-    position: absolute;
-    bottom: 10px;
-    right: 12px;
-    font-size: 0.75rem;
-    color: #00fff7;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 4px 8px;
-    border-radius: 6px;
-    pointer-events: none;
-    z-index: 5;
-    text-shadow: 0 0 4px #00fff7;
-    transform: rotateY(180deg);
+    content: none; /* Hide the label on the back */
   }
 
   .project-card-back::-webkit-scrollbar {
