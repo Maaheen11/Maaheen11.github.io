@@ -596,6 +596,10 @@ h2 {
     position: relative;
   }
 
+  .project-card-container:hover .project-card-front::after {
+    display: none;
+  }
+
   .project-card-front::after {
     content: "Tap to flip";
     position: absolute;
