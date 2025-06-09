@@ -69,7 +69,7 @@ nav.navbar ul li a {
   border-radius: 6px;
   text-shadow: 0 0 4px #00fff7;
   transition: background 0.3s ease;
-  white-space: nowrap; /
+  white-space: nowrap;
 }
 
 nav.navbar ul li a:hover {
@@ -78,54 +78,64 @@ nav.navbar ul li a:hover {
   box-shadow: 0 0 10px #00fff7;
 }
 
-/* Hamburger icon */
+/* Hamburger icon - hidden on desktop */
 .hamburger {
   display: none;
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.6rem;
+  position: fixed;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 2rem;
   color: #00fff7;
-  z-index: 1001;
   cursor: pointer;
+  z-index: 1000;
 }
 
-/* Mobile Styles */
+/* MOBILE styles */
 @media (max-width: 768px) {
+  /* Remove navbar black bar */
   nav.navbar {
-    padding: 0.75rem 0;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
   }
 
+  /* Hide nav links initially */
   nav.navbar ul {
+    display: none;
     flex-direction: column;
-    align-items: center;
     background: rgba(20, 20, 35, 0.95);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    position: fixed;
+    top: 3.5rem; /* Below where navbar would be */
+    right: 0;
+    width: 70vw;
+    max-width: 300px;
+    height: calc(100vh - 3.5rem);
+    padding-top: 1rem;
+    gap: 1.5rem;
+    box-shadow: -2px 0 8px rgba(0, 255, 247, 0.3);
+    border-radius: 0 0 0 10px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
   }
 
   nav.navbar ul.show {
-    max-height: 600px; /* enough height to reveal all links */
+    display: flex;
+    transform: translateX(0);
   }
 
-  nav.navbar ul li {
-    margin: 10px 0;
+  /* Add vertical padding & spacing to nav links for mobile */
+  nav.navbar ul li a {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.2rem;
+    white-space: normal; /* wrap if needed */
+    text-align: left;
   }
 
+  /* Hamburger visible on mobile */
   .hamburger {
     display: block;
   }
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Globe Formatting Section*/ 
