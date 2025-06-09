@@ -487,7 +487,6 @@ h2 {
 }
 
 
-
 .project-card-back {
   transform: rotateY(180deg);
   background: #091825;
@@ -583,9 +582,6 @@ h2 {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .project-card-container {
-    position: relative;
-  }
 
   .project-card-container::after {
     content: none;
@@ -609,11 +605,27 @@ h2 {
     pointer-events: none;
     z-index: 5;
     text-shadow: 0 0 4px #00fff7;
-    user-select: none;
   }
 
   .project-card-back {
     padding-bottom: 3rem;
+    position: relative;
+  }
+
+  .project-card-back::after {
+    content: "Tap to flip";
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 0.75rem;
+    color: #00fff7;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 5;
+    text-shadow: 0 0 4px #00fff7;
+    transform: rotateY(180deg);
   }
 
   .project-card-back::-webkit-scrollbar {
