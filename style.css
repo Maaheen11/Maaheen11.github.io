@@ -78,6 +78,55 @@ nav.navbar ul li a:hover {
   box-shadow: 0 0 10px #00fff7;
 }
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #00fff7;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav.navbar {
+    padding: 0.75rem 0;
+  }
+
+  nav.navbar ul {
+    flex-direction: column;
+    align-items: center;
+    background: rgba(20, 20, 35, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  nav.navbar ul.show {
+    max-height: 600px; /* enough height to reveal all links */
+  }
+
+  nav.navbar ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Globe Formatting Section*/ 
 
