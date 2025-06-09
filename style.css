@@ -29,7 +29,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Stay behind all other content */
+  z-index: -1; 
   pointer-events: none;
 }
 
@@ -78,7 +78,7 @@ nav.navbar ul li a:hover {
   box-shadow: 0 0 10px #00fff7;
 }
 
-/* Hamburger icon - hidden on desktop */
+/* Hamburger icon (hidden on desktop) */
 .hamburger {
   display: none;
   position: fixed;
@@ -151,6 +151,20 @@ nav.navbar ul li a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  #about p,
+  #experience .timeline-content,
+  #education .timeline-content {
+    text-align: left !important;
+  }
+
+  #experience .timeline-content ul,
+  #education .timeline-content ul {
+    padding-left: 1.2rem; 
+  }
+}
+
+
 /* Globe Formatting Section*/ 
 
 .container {
@@ -203,7 +217,6 @@ h2 {
   opacity: 1;
   visibility: visible;
 }
-
 
 
 /* Hero Section */
@@ -402,8 +415,23 @@ h2 {
   filter: drop-shadow(0 0 10px #00fff7);
 }
 
-/* Projects Section */ 
+@media (max-width: 768px) {
+  .skill-logos {
+    flex-wrap: wrap;
+  }
 
+  .skill-logos img {
+    width: 48px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .skill-card {
+    padding: 16px;
+  }
+}
+
+/* Projects Section */ 
 .projects-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -423,7 +451,6 @@ h2 {
   margin-bottom: 30px; 
 }
 
-
 .project-card-container:hover .project-card {
   transform: rotateY(180deg);
 }
@@ -431,7 +458,7 @@ h2 {
 .project-card {
   position: relative;
   width: 100%;
-  height: 520px; /* Enforce fixed height */
+  height: 520px; 
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
   will-change: transform;
@@ -459,14 +486,13 @@ h2 {
   overflow: hidden;
 }
 
-.project-card-front {
-  z-index: 2;
-}
+
 
 .project-card-back {
   transform: rotateY(180deg);
   background: #091825;
-  overflow: hidden; /* prevent layout shift from scrollbar */
+  overflow-y: auto;
+  scroll-behavior: smooth;
   padding: 0.75rem; 
 }
 
@@ -474,8 +500,6 @@ h2 {
 .project-card-container:hover .project-card-back {
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
-
-
 
 .project-card-front .project-title {
   margin-bottom: 1rem;
@@ -558,6 +582,50 @@ h2 {
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .project-card-container {
+    position: relative;
+  }
+
+  .project-card-container::after {
+    content: none;
+  }
+
+  .project-card-front {
+    padding-bottom: 3rem; 
+    position: relative;
+  }
+
+  .project-card-front::after {
+    content: "Tap to flip";
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 0.75rem;
+    color: #00fff7;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 5;
+    text-shadow: 0 0 4px #00fff7;
+    user-select: none;
+  }
+
+  .project-card-back {
+    padding-bottom: 3rem;
+  }
+
+  .project-card-back::-webkit-scrollbar {
+    width: 6px;
+  }
+  .project-card-back::-webkit-scrollbar-thumb {
+    background-color: #00fff7;
+    border-radius: 10px;
+  }
+  .project-card-back::-webkit-scrollbar-track {
+    background: #091825;
+    border-radius: 10px;
   }
 }
 
@@ -721,7 +789,7 @@ h2 {
 }
 
 .education-box {
-  color: #e0f7ff; /* Default text color */
+  color: #e0f7ff; 
   font-size: 1.05rem;
 }
 
