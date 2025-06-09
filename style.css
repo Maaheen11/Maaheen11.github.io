@@ -583,6 +583,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .project-card-container {
+    position: relative;
+  }
+
   .project-card-container::after {
     content: none;
   }
@@ -590,6 +594,7 @@ h2 {
   .project-card-front {
     padding-bottom: 3rem;
     position: relative;
+    z-index: 2;
   }
 
   .project-card-front::after {
@@ -605,15 +610,17 @@ h2 {
     pointer-events: none;
     z-index: 5;
     text-shadow: 0 0 4px #00fff7;
+    user-select: none;
+  }
+
+  .project-card-back::after {
+    content: none !important;
+    display: none !important;
   }
 
   .project-card-back {
     padding-bottom: 3rem;
-    position: relative;
-  }
-
-  .project-card-back::after {
-    content: none; /* Hide the label on the back */
+    overflow-y: auto;
   }
 
   .project-card-back::-webkit-scrollbar {
