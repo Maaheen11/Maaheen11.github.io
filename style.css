@@ -582,7 +582,7 @@ h2 {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .project-card-container {
     position: relative;
   }
@@ -592,9 +592,8 @@ h2 {
   }
 
   .project-card-front {
-    padding-bottom: 3rem;
+    padding-bottom: 3rem; 
     position: relative;
-    z-index: 2;
   }
 
   .project-card-front::after {
@@ -613,14 +612,8 @@ h2 {
     user-select: none;
   }
 
-  .project-card-back::after {
-    content: none !important;
-    display: none !important;
-  }
-
   .project-card-back {
     padding-bottom: 3rem;
-    overflow-y: auto;
   }
 
   .project-card-back::-webkit-scrollbar {
