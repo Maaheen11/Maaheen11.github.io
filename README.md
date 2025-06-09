@@ -8,6 +8,7 @@ Welcome to my personal portfolio! This website is designed to showcase my techni
 ### Key Features
 
 - **Interactive Animations**: Engaging user interface with smooth transitions and interactive elements.
+- **Responsive Design**: Fully accessible across devices—desktop, tablet, and mobile.
 - **Project Showcase**: Detailed descriptions, tech stack used, and github repos of my technical work.
 - **Continuous Learning**: Regular updates reflecting new skills, technologies, and project milestones.
 
