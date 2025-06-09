@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This website is designed to showcase my technical projects, professional experience, and ongoing journey in software engineering and computer science. Built with a focus on interactivity, user experience, and continuous learning, it reflects my passion for building impactful digital solutions.
 
-### Key Features
+## Key Features
 
 - **Interactive Animations**: Engaging user interface with smooth transitions and interactive elements.
 - **Responsive Design**: Fully accessible across devices—desktop, tablet, and mobile.
