@@ -247,18 +247,18 @@ h2 {
 }
 
 .hero-text .subtitle {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   color: #a2dce7;
   font-weight: 600;
-  margin: 8px 0;
+  margin: 12px 0;
   text-shadow: 0 0 5px #00fff7;
 }
 
 .hero-text .tagline {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-style: italic;
   color: #c5b3fc;
-  margin-top: 20px;
+  margin-top: 24px;
   text-shadow: 0 0 10px #c084fc;
 }
 
@@ -393,7 +393,7 @@ h2 {
 }
 
 .skill-card ul li {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 600;
   color: #e0f7ff;
 }
@@ -407,14 +407,14 @@ h2 {
   padding-top: 15px;
   display: flex;
   justify-content: flex-start;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .skill-logos img {
-  width: 55px;
-  height: 60px;
+  width: 42px;
+  height: 46px;
   filter: drop-shadow(0 0 6px rgba(0, 255, 247, 0.5));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
