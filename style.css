@@ -151,7 +151,10 @@ nav.navbar ul li a:hover {
 }
 
 @media (max-width: 768px) {
-  #about p,
+  #about p {
+    text-align: justify !important;
+  }
+
   #experience .timeline-content,
   #education .timeline-content {
     text-align: left !important;
@@ -407,7 +410,7 @@ h2 {
   padding-top: 15px;
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 18px;
   align-items: center;
   flex-wrap: nowrap;
 }
