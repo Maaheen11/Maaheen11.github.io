@@ -252,7 +252,6 @@ h2 {
   font-weight: 600;
   margin: 8px 0;
   text-shadow: 0 0 5px #00fff7;
-  white-space: nowrap;
 }
 
 .hero-text .tagline {
@@ -353,6 +352,7 @@ h2 {
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .skill-card {
